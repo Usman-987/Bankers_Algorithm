@@ -279,3 +279,21 @@ var res,pro;
 								}
 						}
 			}
+			function downloadFile() {
+				// Create an anchor element
+				var downloadLink = document.createElement('a');
+				
+				// Set the download link attributes
+				downloadLink.href = 'Tutorial.txt';  // Replace 'example.txt' with your file name
+				downloadLink.download = 'Tutorial.txt';  // Set the desired downloaded file name
+			
+				// Append the anchor element to the body
+				document.body.appendChild(downloadLink);
+			
+				// Trigger a click on the anchor element
+				downloadLink.click();
+			
+				// Remove the anchor element from the body
+				document.body.removeChild(downloadLink);
+			}
+			
